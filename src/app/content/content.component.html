@@ -1,0 +1,15 @@
+<h1>
+  {{ content.title }}
+</h1>
+<div>
+  {{ content.description }}
+</div>
+<br />
+<br />
+<button
+  type="button"
+  (click)="updateColor.emit()"
+  [ngStyle]="{ 'background-color': content.color }"
+>
+  Set {{ content.color }}
+</button>

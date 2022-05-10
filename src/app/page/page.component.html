@@ -1,0 +1,12 @@
+<h1 id="page-title" [ngStyle]="{ color: color }">Page Title...</h1>
+
+<div id="page-container" fxLayout="row wrap" fxLayoutAlign="center">
+  <app-content
+    *ngFor="let content of contents"
+    [content]="content"
+    (updateColor)="handleUpdate(content.color)"
+    [ngStyle]="{
+      'border-color': color === content.color ? content.color : 'transparent'
+    }"
+  ></app-content>
+</div>
